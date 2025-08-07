@@ -1,0 +1,342 @@
+<HTML>
+<head>
+<title>itinerae: radioactive </title>
+<link rel="shortcut icon" href="https://files.catbox.moe/m5tyiv.png"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+
+
+<style type="text/css">
+
+body {
+background:#0C1912 url(https://files.catbox.moe/7zggqg.webp);}
+  
+  
+table {
+font-family:"Goldman", courier new;
+font-size:11px;
+line-height:13px;
+letter-spacing: 1px;
+color:#458c3a;}
+
+b {color:#00FF00;font-weight:normal;}
+
+a:link, a:visited, a:active { 
+color:green;text-decoration:none;}
+a:hover {color:#00FF00;}
+  
+img {border:0;}
+  
+::-webkit-scrollbar-thumb {
+background-color: green;  
+border-radius: 3px;}
+::-webkit-scrollbar {
+width: 5px; height: 0px; 
+background: transparent;}
+
+
+.title {
+display:inline-block;
+background:#051105;
+color:green;
+font-family:'orbitron';
+font-size:10px;
+text-transform:uppercase;
+line-height:10px;
+letter-spacing:3px;
+border-top-left-radius:3px;border-top-right-radius:3px;
+border:1px solid #113711;
+border-bottom:1px dotted green;
+padding:4px;}
+  
+  
+.navigation a { 
+display:inline-block;
+background:; 
+padding-left:10px;
+padding-right:10px;
+font:9px 'orbitron';
+text-transform:uppercase;
+font-weight:bold;
+border-top-left-radius:0px;border-top-right-radius:0px;
+line-height:12px;
+color:green;}
+      
+.navigation a:hover {
+color:#00FF00;}
+  
+
+.sitename {background:#111;width:90%;font-family:'orbitron';font-size:30px;letter-spacing:10px;color:green;line-height:20px;border-radius:15px;}
+.top {background: #000; border: 1px solid #123E12;border-bottom: 0px;border-top-left-radius:15px;border-top-right-radius:15px;}
+.navigation {background:#0B250B;border-bottom: 1px dotted #123E12;}
+.left {background: #000; border-right: 1px dotted #123E12;border-left: 1px solid #123E12;}
+.middle {background: #000;border-right:1px dotted #113711;}
+.right {background: #000;border-right: 1px solid #113711;}
+.footer {background: #000; border: 1px solid #123E12; border-top: 1px dotted #123E12;line-height:30px;}
+.box {background:#051105;border:1px solid #113711;border-top:2px solid #111;border-radius:3px;
+border-top-left-radius:0px;padding:4px;padding-left:8px;padding-top:8px;margin-bottom:8px;}
+#news {background:#000;font-size:9px;}
+textarea {background:#000;border:1px solid #123E12;color:#458c3a;font:10px 'goldman';letter-spacing:1px;margin-bottom:5px;}
+
+  
+</style>
+  
+  
+<script type="text/javascript">
+// <![CDATA[
+var news=Array("Welcome to DarkNet Marketplace", "SHOP NOW $$$");
+var cursor="_"; // set cursor
+var delay=8; // seconds between each news item
+
+/***************************\
+* News Ticker Text Effect   *
+*(c)2004-14 mf2fm web-design*
+*  http://www.mf2fm.com/rv  *
+* DON'T EDIT BELOW THIS BOX *
+\***************************/
+var newsp, cursp, flash, item=0;
+
+if (typeof('addRVLoadEvent')!='function') function addRVLoadEvent(funky) {
+  var oldonload=window.onload;
+  if (typeof(oldonload)!='function') window.onload=funky;
+  else window.onload=function() {
+    if (oldonload) oldonload();
+    funky();
+  }
+}
+
+addRVLoadEvent(teleprint);
+
+function teleprint () { if (document.getElementById) {
+  var span=document.getElementById("news");
+  while (span.childNodes.length) span.removeChild(span.childNodes[0]);
+  delay*=1000;
+  newsp=document.createElement("span");
+  cursp=document.createElement("span");
+  cursp.appendChild(document.createTextNode(String.fromCharCode(160)+cursor));
+  span.appendChild(newsp);
+  span.appendChild(cursp);
+  ticker();
+}}
+
+function ticker() {
+  var i;
+  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
+  newsp.appendChild(document.createTextNode(news[item].substring(0,1)));
+  for (i=1; i<news[item].length; i++) setTimeout('newsp.firstChild.nodeValue="'+news[item].substring(0, i+1)+'"', 100*i);
+  if (news[item].indexOf("www")!=-1) setTimeout('linkit('+item+')', 100*i);
+  setTimeout('flash=setInterval("cursp.style.visibility=(cursp.style.visibility==\'visible\')?\'hidden\':\'visible\'", 234)', 100*i)
+  setTimeout('clearInterval(flash)', delay);
+  setTimeout('cursp.style.visibility="visible"', delay);
+  setTimeout('ticker()', delay);
+  item=++item%news.length;
+}
+
+function linkit(q) {
+  var a,p,e,l;
+  p=news[q].indexOf("www");
+  e=news[q].indexOf(" ", p);
+  if (e==-1) e=news[q].length;
+  l=news[q].substring(p, e);
+  while (newsp.childNodes.length) newsp.removeChild(newsp.childNodes[0]);
+  newsp.appendChild(document.createTextNode(news[q].substring(0, p)));
+  a=document.createElement("a");
+  a.href="http://"+l;
+  a.appendChild(document.createTextNode(l));
+  newsp.appendChild(a);
+  newsp.appendChild(document.createTextNode(news[q].substring(e)));
+}
+// ]]>
+</script>
+  
+</head>
+
+  
+  
+  
+  
+<body>
+  
+  
+<br><br><br>
+  
+
+<center>
+<table  width="700" cellpadding="8" cellspacing="0"> 
+<tr>
+<td class="top" height="110"> 
+<center>
+<center><img src="https://i.gifer.com/origin/b0/b0a9f4d56d6766e567f4c24f39386997_w200.gif" width="150" alt="skull"></center><br>
+<div class="sitename">BLACKOUT</div> <br>
+<span id="news"></span>
+</center>
+</td>
+</tr>
+</table>
+  
+<table width="700" cellpadding="8" cellspacing="0">
+<tr>
+<td class="left" width="200" valign="top">
+
+<div class="title">001. CANNABIS </div>
+<div class="box">
+Northern Lights, GSC, Gelato, Sour Diesel, Shiatu Kush, Purple Haze, Biscotti, Bubba Kush, Lemon OG, Black Magic Kush, Runtz OG <br>
+<b>0.1g - $10.00, 1.0g - $100.00</b> <a href=""></a>
+<center><img src="https://64.media.tumblr.com/ff9a4672979fcc68d2940662879651fb/f648ecf41ce13377-66/s1280x1920/26c1ce447c5b727d69f30c5728d5c935e12e0b41.gifv" width="150" alt="cannabis"><center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center></center>
+</div>
+
+
+<div class="title">002. crack cocaine </div>
+<div class="box">
+<b>0.1g — $25.00 , 1.0g — $100.00</b> <a href=""></a>
+<center><img src="https://64.media.tumblr.com/36f0850266a59590149c332d2c08fde1/tumblr_nwblejFL3C1rw3zmqo1_400.gifv" width="150" alt="crack"></center>
+<center><a target="_blank"
+ href="https://itinerae.blogspot.com/">SHOP NOW</a> <a target="_blank" href="https://discord.gg/WRyt7BuzRq"></a></center>
+</div>
+
+<div class="title">003. cocaine </div>
+<div class="box">
+<b>0.1g — $35.00 , 1.0g — $450.00 - $500.00 </b> <a href=""></a>
+<center><img src="https://64.media.tumblr.com/cfa15986304229d67c8538b4b9d488e2/8c4cd103657fcd40-df/s1280x1920/916117a62da6a3e487d28c5b446e20a91b22a6ba.gifv" width="150" alt="cocaine"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> 
+</div>
+
+<div class="title">004. codeine </div>
+<div class="box">
+<b>(1oz) —  $150.00 , (16oz) — $2,400.00 </b> <a href=""></a>
+<center><img src="https://m.media-amazon.com/images/I/61RByrYUANL.jpg" width="150" alt="codeine"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> </div>
+
+  
+  
+  
+
+<td class="middle" width="300" valign="top">
+  
+<div class="title">005. xanax </div>
+<div class="box">
+<b>1 pill — $150.00 </b> <a href=""></a>
+<center><img src="https://static.wixstatic.com/media/787d4f_1dbe1c5924ee460c8a7be6cbcefc6ebc~mv2.gif" width="150" alt="xanax2"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> </div>
+  
+<div class="title">006. mdma </div>
+<div class="box">
+<b>1 pill — $200.00 </b> <a href=""></a>
+<center><img src="https://media1.tenor.com/m/BOUb1qQmLU0AAAAC/freakbob-freakybob.gif" width="150" alt="mdma"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> 
+  </div>
+  
+  <div class="title">007. OXYCODONE </div>
+<div class="box">
+<b>1 pill — $250.00 </b> <a href=""></a>
+<center><img src="https://64.media.tumblr.com/2be5530208d804e8df4c58f7bbeb9968/bad099fa5c0e7ddc-bb/s1280x1920/cf310d9c94693563466c76b38732ab5f013c4bbd.gifv" width="150" alt="mdma"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> 
+  </div>
+  
+  <div class="title">008. PERCOCET </div>
+<div class="box">
+<b>1 pill — $100.00  </b> <a href=""></a>
+<center><img src="https://media2.giphy.com/media/v1.Y2lkPTZjMDliOTUyaGlrMTdtc3Q5eHpkeXB1ajVjZGJkdDg4cnE3Mmh2bmV6dDM4ZWN4YyZlcD12MV9naWZzX3NlYXJjaCZjdD1n/kIuDGjucy9vsMRaT63/giphy_s.gif" width="150" alt="mdma"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> 
+  </div>
+  
+    <div class="title">009. heroin </div>
+<div class="box">
+<b>0.1g — $20.00  Black Tar, Brown Sugar </b> <a href=""></a>
+<center><img src="https://64.media.tumblr.com/41de8df01a12d56508c3c997cc35b558/692fd1d7df55fffe-1d/s1280x1920/b75fbfc31eeeba154858b5fde6de7a47239ba0f9.gifv" width="150" alt="mdma"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> 
+  </div>
+  
+  <div class="title">010. ketamine </div>
+<div class="box">
+<b>0.1g — $15.00, 1.0g — $150.00 </b> <a href=""></a>
+<center><img src="https://64.media.tumblr.com/f1a3a987e4f945813df7269bfdde033f/bc7aa2e67c3a3097-c4/s1280x1920/e7e2fda0926c544dbb6ca3cf046cfe5742650896.gifv" width="150" alt="mdma"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> 
+  </div>
+  
+</td>
+
+<td class="right" width="200" valign="top">
+
+
+  
+  <div class="title">011. fenta </div>
+<div class="box">
+<b>1 pill — $175.00 </b> <a href=""></a>
+<center><img src="https://64.media.tumblr.com/54b027628ceeb7565e8997725d0940a3/692fd1d7df55fffe-2c/s1280x1920/6c95e948a205c1f2dfd2bd8f8a9a01014cf62a57.gifv" width="150" alt="mdma"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> 
+  </div>
+  
+  <div class="title">012. methamphetamine </div>
+<div class="box">
+<b>0.1g — $15.00, 1.0g — $150.00 </b> <a href=""></a>
+<center><img src="https://64.media.tumblr.com/3e276c34bff53847d7de4fedb6fb8245/36f5e1ad0f5c87a2-0f/s1280x1920/73de99330da0f8ae032bca488b0957f043ec2b23.gifv" width="150" alt="mdma"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> 
+  </div>
+  
+  <div class="title">013. steroids </div>
+<div class="box">
+<b>1 pill — $250.00 </b> <a href=""></a>
+<center><img src="https://64.media.tumblr.com/56f7f289f1411c0f48588e8c62df536c/1f9f73ab38edcadf-15/s640x960/5b86c83fe8564d8060b96438a3e2d59a23541f05.gifv" width="150" alt="mdma"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center> 
+  </div>
+  
+  
+<div class="title">014. guns </div>
+<div class="box">
+<b>$20000 - $90000 </b> <a href=""></a>
+Deagle, 
+Colt, 
+Shotgun, 
+Sdpistol,
+Mac10,
+Tec9,
+Rifle,
+MP5, 
+M4, 
+AK47  <br>
+<center><img src="https://64.media.tumblr.com/79a6798b8da1f96bce68d66bf801872c/da908b408fea7281-64/s1280x1920/9af7cc751fea234eefa9f72bdc2f30056f2c5a32.gifv" width="150" alt="glock"></center>
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center>
+</div>
+
+  </td>
+</table>
+  
+  
+  
+  
+<table width="700" height="30" cellpadding="4" cellspacing="0"> 
+<tr>
+<td class="footer" valign="top">
+<center><a target="_blank"
+ href="https://discord.gg/WRyt7BuzRq">SHOP NOW</a> <a target="_blank" href="https://www.mf2fm.com/rv/"></a></center>
+   
+</td>
+</tr>
+</table>
+
+  
+  
+  
+</center>
+     
+  
+</body>
+</HTML> 
